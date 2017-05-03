@@ -123,7 +123,7 @@ install(TARGETS bmp2tiff
                 tiffsplit
         RUNTIME DESTINATION "${CMAKE_INSTALL_FULL_BINDIR}")
 
-if(HAVE_OPENGL)
+if(HAVE_OPENGL AND HAVE_UNISTD_H)
   if(OPENGL_INCLUDE_DIR)
     include_directories(${OPENGL_INCLUDE_DIR})
   endif()
